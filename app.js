@@ -28,7 +28,7 @@ mongoose.connect(dbURI, {
   });
 
 app.get("/", cors(), (req, res) => {
-  res.render("index");
+  res.send("index");
 });
 
 app.use("/api/shorturl", cors(), routes);
