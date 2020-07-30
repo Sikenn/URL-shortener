@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const routes = require("./routes/urlRoutes");
 
@@ -26,8 +27,8 @@ mongoose.connect(dbURI, {
     console.log(err);
   });
 
-app.get("/", (req, res) => {
+app.get("/", cors(), (req, res) => {
   res.render("index");
 });
 
-app.use("/api/shorturl", routes);
+app.use("/api/shorturl", cors(), routes);
