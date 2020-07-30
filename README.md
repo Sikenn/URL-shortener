@@ -14,3 +14,6 @@ error like `{error: "invalid URL"}`
 the function `dns.lookup(host, cb)` from the  `dns` core module.
 
 3. When i visit the shortened URL, it will redirect me to my original link.
+
+## Application link
+[url-shortener](https://url-shortener-sk.herokuapp.com/)
